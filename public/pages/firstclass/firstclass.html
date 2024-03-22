@@ -1,0 +1,72 @@
+<h1>Git i terminal</h1>
+<div class="gitcommand-container">
+  <a><img src="/assets/images/gitcommands/gitaddA.png" /></a>
+  <p>git add -A, tilføjer alle ændringer der er foretaget i projectet til næste commit</p>
+  <a><img src="/assets/images/gitcommands/gitadddirectory.png" /></a>
+  <p>git add ., tilføjer alle mapper til det næste commit.</p>
+  <a><img src="/assets/images/gitcommands/gitcommit.png" /></a>
+  <p>
+    git commit -M"", commiter de ændringer der er lavet i lokalt repo, -m"" tilføjer en meddelse til commit,
+    det er vigtigt med gode commit meddelser
+  </p>
+  <a><img src="/assets/images/gitcommands/gitush.png" /></a>
+  <p>git push, skubber commitet ud til remote repo på github.</p>
+</div>
+
+
+<h1>DataTyper i Javascript</h1>
+<div class="datatype-container">
+  <ul>
+    <li>Number</li>
+    <li>String</li>
+    <li>Boolean</li>
+    <li>Objects</li>
+    <li>Null</li>
+    <li>Undefined</li>
+    <li>Symbol</li>
+    <li>Bigint(123123123123)</li>
+  </ul>
+</div>
+
+<h1>Type Coercion i javascript</h1>
+<div class="typecoercion-container">
+  <p>
+    Type coercion er en design filosofi i javascript,man har valgt at det skal være muligt i da man
+    designede sproget
+    men hvad er det? det muligegøre at sammenligne forskellige datatyper fordi et sprog som JS tillader
+    det.
+    det laver automatisk en datatype om til den type den skal sammenlignes med så de KAN sammenlignes
+    det er noget vi som udgangspunkt gerne vil undgå, så derfor bruger vi altid
+    strict equality checks " === og !== "
+    eksempel: </p>
+    <div class="typecoercion-images"><a><img src="/assets/images/typecoercion/numbereksempel.PNG"></a><a><img src="/assets/images/typecoercion/consolelognumber.PNG"></a></div>
+  <p>
+    eksemplet viser hvordan JS tager et nummber og laver det om til en streng for at de to typer kan bruges i den her plus funktion.<br>
+    og resultatet er at vi istedet for at få 15, som er matematisk korrekt, så får vi 105<br> fordi hvis man tager en streng og "plusser" den med en anden streng så sætter man dem sammen.
+  </p>
+</div>
+
+<h1>Rest Api Designs</h1>
+<div class="restimages-container">
+  <a><img src="/assets/images/endpointdesign/endpoint computer.PNG" /></a>
+  <a><img src="/assets/images/endpointdesign/endpoint drinks.PNG" /></a>
+  <a><img src="/assets/images/endpointdesign/endpointaimodel.PNG" /></a>
+</div>
+<p>vi har designet rest APier ud fra de 3 conventions nævnt nederst.<br>det fremgår at vi bruger navneord i flertals form når vi designer APier</p>
+
+<h2>Rest conventions</h2>
+
+<div class="restlist-container">
+  <ul>
+    <li>gør Brug af det rigtige HTTP Verb</li>
+    <p>"Get, Post, Delete, Put, Patch"</p>
+    <li>Brug den korrekte rækkefølge til HTTP Verbs</li>
+    <p>"Get Post Put Patch Delete"</p>
+    <li>Standardisering af endpoints</li>
+    <p>
+      Så de reflektere de data og rescourcer vi bruger bag i systemet. Naming ( noun, plural).
+      Eksempel: 
+      App.get("/computers") - henter alle computere.
+    </p>
+  </ul>
+</div>

@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif; /* Set Arial as the font family for the entire page */
+}
+p {
+  max-width: 600px; /* Set maximum width for paragraphs */
+  margin: 0 auto; /* Center paragraphs horizontally */
+  padding: 0 20px; /* Add padding to paragraphs */
+  line-height: 1.5; /* Set line height for better readability */
+}
+pre {
+  background-color: black; /* Set black background for <pre> elements */
+  color: orange; /* Set orange text color for <pre> elements */
+  padding: 10px; /* Add padding to <pre> elements */
+  display: block; /* Change display to block */
+  margin: 0 auto; /* Center <pre> elements horizontally */
+  border-radius: 10px; /* Add rounded corners */
+  max-width: 600px; /* Set maximum width for <pre> elements */
+  overflow-x: auto; /* Add horizontal scroll if needed */
+}
+
+code {
+  color: orange; /* Set orange text color for <code> elements */
+}
+img {
+  display: block; /* Change display to block */
+  margin: 0 auto; /* Center elements horizontally */
+  max-width: 600px;
+}
+li {
+  /* Change display to block */
+  margin: 0 auto; /* Center elements horizontally */
+  text-align: center; /* Center the text within <li> */
+  font-weight: bold; /* Make font weight bold */
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  text-align: center;
+}

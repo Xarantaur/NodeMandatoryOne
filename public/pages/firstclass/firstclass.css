@@ -1,0 +1,17 @@
+.restlist-container ul {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.restlist-container li {
+  padding-top: 20px;
+}
+
+.datatype-container ul {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.datatype-container li {
+  padding-top: 20px;
+}

@@ -1,0 +1,35 @@
+nav {
+  background-color: black; /* Set background color */
+  padding: 10px 20px; /* Add padding to the top and bottom, and a bit more to the sides */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  border-radius: 2%;
+}
+
+#logo-container {
+  margin-right: auto; /* Push logo container to the left */
+}
+
+#logo {
+  width: 50px; /* Set logo width */
+  height: 50px; /* Set logo height */
+}
+
+ul {
+  display: flex; /* Use flexbox for layout */
+  list-style-type: none; /* Remove bullet points from list */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+li {
+  margin-right: 20px; /* Add margin between list items */
+}
+
+a {
+  color: white; /* Set text color to white */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 18px; /* Increase font size */
+  font-weight: bold; /* Make the font bold */
+  margin-right: 20px; /* Add margin between links */
+}

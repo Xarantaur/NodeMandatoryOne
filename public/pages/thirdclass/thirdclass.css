@@ -1,0 +1,27 @@
+.nodemon-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.nodemon-container li {
+  padding-top: 20px;
+}
+
+.loop-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.loop-container li {
+  font-size: large;
+  padding-top: 20px;
+}
+.urlanatomy-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.urlanatomy-container li {
+  padding-top: 20px;
+}

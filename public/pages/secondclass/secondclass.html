@@ -1,0 +1,119 @@
+<h1>Scoping</h1>
+<div class="scope-container">
+  <ul>
+    <li>Globale Scope</li>
+    <p>er alt udenfor functioner og og blocks. Hvis der ligger variabler her så kan alle tilgå dem.</p>
+    <li>Function Scope</li>
+    <p>er området imellem en funktions tuborg klammer {variabler herinde kan kun tilgås i funktionen. }</p>
+    <li>Block Scope</li>
+    <p>
+      en block er ting imellem tuborgklammer {} eksempelvis et If statement eller en forloop. Som ikke har en
+      funktion foran sig.
+    </p>
+  </ul>
+</div>
+
+<h1>Advanced functions</h1>
+<div class="advancedfunctions-container">
+  <a><img src="/assets/images/functions/advancedfunctions.png" /></a>
+  <a><img src="/assets/images/functions/oneliner.PNG" /></a>
+  <h1>CallBack function</h1>
+  <a><img src="/assets/images/functions/callback.PNG" /></a>
+</div>
+
+<h1>send data med HTTP get requests</h1>
+<div>
+  <p>
+    et eksempel på dette har jeg fra vores drinks projekt. 
+    på billedet kan vi se at vi har lavet et endpoint der skal have et id tid med "/:id"
+    det tages fat i med req.params.id som så kan bruges af logik på SS. i dette eksempel
+    iterere jeg igennem et lille array af drinks og sender en drink tilbage hvis der findes 
+    en drink med det sendte id.
+  </p>
+  
+  <a><img src="/assets/images/queryandparam/drinksdotid.PNG" /></a>
+  <p>
+    i næste snippet sendes et res afhængig af om der eksistere et bestemt ord i URLen hvis handsome er =
+    "very" 
+    så sendes "thanks cool cat" til siden.
+  </p>
+  
+  <a><img src="/assets/images/queryandparam/reqquery.PNG" /></a>
+  <p></p>
+</div>
+
+<h1>Express</h1>
+<p>
+  hvad er Express for noget?
+  et minimalistisk web framework for node.js
+  er beskrivelsen på Express egen hjemmeside
+  Express stiller et library til rådighed med nogle gode værktøjer
+  til at bygge "robuste" API'er hurtigt og nemt. som de selv skriver.
+  <a href="www.expressjs.com">www.expressjs.com</a>
+</p>
+<div class="express-container">
+  <p>før man kan bruge express i sit projekt. skal det installeres og importeres</p>
+  <li>Node_modules</li>
+  <a><img src="/assets/images/express/node_module.PNG" /></a>
+  
+  <p>
+    når man vil bruge andre frameworks i node.js eksempelvis express
+    skal man installere dette ved hjælp af npm (node package Manager)
+    man kan gøre dette ved at skrive "npm install" i sin terminal. forudsat
+    at man har en package.json fil i sit projekt der specificere hvilke dependencies man gerne vil
+    have ud af node package manageren. når man køre npm så henter den en folder kaldet "node_modules"
+    der indeholder alle de filer og dependencies so det framework man henter skal bruge for at kunne køre
+  </p>
+  <li>Package.json</li>
+  <a><img src="/assets/images/express/packagejsofolder.PNG" /></a>
+  <a><img src="/assets/images/express/packagejson indhold.PNG" /></a>
+  <p>
+    man kan selv oprette en fil der hedder "package.json" med de dependencies man skal bruge.
+    alternativt kan man skrive "npm install express" i sin terminal
+    så opretter package manager selv en package.json fil med en dependency til det specificerede framework.
+    package.json kan sammenlignes med pom.xml i maven projekter
+  </p>
+  <!--  <p>
+    Men før at man kan bruge Express i sit projekt så skal det installeres.
+    det kan gøres på følgende måde:
+    <li>Npm install express</li>
+    <li>Npm i express</li>
+    <li>Npm i express@latest</li>
+    alle tre commands installere express i Projektet. når man har kørt en af disse kommandoer så vil man
+    opdage nogle ting i sit projekt. 
+    (NPM er standard package manager for Node.js <br>
+    den styre downloads af projecktet dependencies)
+    <div class="expressimage-container">
+    <a><img src="/assets/images/express/node_module.PNG" /></a>
+    <a><img src="/assets/images/express/packagejsofolder.PNG" /></a>
+    <a><img src="/assets/images/express/packagejson indhold.PNG" /></a>
+</div>
+    <li>node_modules, package.json</li>
+    <p>  Hvis man skriver npm install i sin terminal så får man en fejl, hvis man ikke har specificeret en dependency på forhånd.<br>
+blandt andet "Express", i de kommandoer oven for har jeg explicit bedt om at få installeret express dependency.<br> 
+hvilket gør at man får en package.json fil med den korrekte dependency i til projektet.<br>
+alternativt kan man også selv skrive sine dependencies først og så køre "Npm install" så kigger den efter en json fil<br>
+og installere de specificerede dependecies i den fil.</p>
+  </p>
+  <p> nu har er node_modules installeret og vi har en package.json der indeholder dependency til en funktionalitet -Express<Br>
+    det skal importeres i et project det har vi gjort på følgende måder:<br>
+    <a><img src="/assets/images/express/instansExpress.PNG"></a><br>
+    i commonJS bruger man require til at "importere" funktionaliteten ind i sin fil<br>
+    <a><img src="/assets/images/express/importExpress.PNG"></a><br>
+    i ECMAScript bruger man import -- from -- <br>
+    men for at kunne dette er man nød til at redigere i sin package.json. <br>
+    <a><img src="/assets/images/express/packagejsonmodule.PNG"></a><br>
+    til at indeholde "type":"module"
+</p> -->
+</div>
+
+<div>
+  <h1>Server instans med express</h1>
+
+  <a><img src="assets/images/express/instansExpress.PNG" /></a>
+  <p>
+    med commonJS "importeres" express in i projekt filen med "require()"
+    express instancieres i const app og den bruges i bunden af siden til at 
+    lytte på port 8080 (localhost:8080)
+  </p>
+</div>

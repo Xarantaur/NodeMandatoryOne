@@ -1,0 +1,87 @@
+<h1>Import / Export</h1>
+<p>
+  vi har tidligere arbejdet med at importere Express in i vores projekter med require() i app.js filen. for så
+  at instansiere den på en app variabel<br />
+  på femte undervisnings dag blev vi introduceret for en ny måde at importere express og andre emner generalt.
+</p>
+<pre><code> 
+    const express = require("express");
+    const app = express(); 
+
+    => 
+
+    import express from "express";
+    const app = express();
+</code></pre>
+<p>
+  den første er commonjs måde at importere på<br />
+  den næste er ECMAscript metode at importere på.<br />
+  for at kunne bruge den nye måde at importere "emner" på så skal man redigere i sin package.json:
+</p>
+
+<pre><code>
+    {
+        "dependencies": {
+          "express": "^4.18.3"
+        }
+    } 
+    =>
+     {
+        "type": "module",
+        "dependencies": {
+          "express": "^4.18.3"
+        }
+    }
+  </code></pre>
+<p>
+  til at indeholde "type":"module", eller også skal filerne der bruges være mjs. vi skal bruge import via
+  ECMAscript fremover. det er vigtigt at vide at der er nogle ting som ikke længere virker som de har gjort
+  ellers eksempelvis har jeg tidligere brugt "__dirname" som en del af path navnet på en html fil, når jeg har
+  skulle serve html filer.:
+</p>
+<pre><code>
+    directory + "/public/homepage/homepage.html
+  </code></pre>
+<p>
+  det virker ikke længere. der vil opstå en client side error når man forsøger at få fat i disse elementer. så
+  for at få fat i statiske filer skal man bruges Express.static() for at client side kan få fat i det filer
+</p>
+<pre><code> 
+    app.use(express.static("public"));
+  </code></pre>
+<p>
+  her deklareres public mappen i projektet til at være den statiske mappe. det er i den mappe min homepage,
+  samt andre filer ligger. samtidig er det også en måde for mig at kontrollere hvilke mapper i projektet som
+  client side har adgang til. dette giver anledning til at snakke om html strukturen i resten af projektet:
+</p>
+
+<h1>HTML Struktur</h1>
+
+<a><img src="/assets/images/htmlstructure/htmlpublicfolder.PNG" /></a><br />
+<p>
+  billedet viser de 3 undermapper jeg har i min public folder, som er den folder der gives med til
+  "offentligheden" dem der måtte besøge siden. mapperne er :
+</p>
+
+<li>assets</li>
+<li>components</li>
+<li>pages</li>
+
+<p>
+  assets holder på Css, billeder og javascript der køre uafhængigt af app.js eksempelvis så ligger der en
+  javascrit fil som håndtere årstallet i footeren på denne side. så er der en component folder, her ligger der
+  en footer folder og en header folder. de ligger her fordi det er "componenter" der bruges til at bygge html
+  siden op i en template jeg læser filerne herfra når serveren starter og gives de med hver gang man går ind
+  på en ny side. pages, siger næsten sig selv. det er her html sider ligger. samt eventuel specifik css der er
+  relevant for den ene side.
+</p>
+<p>
+  på den node har vi også snakket om html sidens struktur, "semantic HTML" er et term der bruges omkring
+  opbygning af en html side. det har fokus på at man bruger de rette tags til forskellige dele af en html
+  side. dette hjælper med readability i koden generalt men det hjælper også accessability. hvis der skulle
+  sidde nogen med øjn problemer og får læst siden op. eksempler på disse tags:
+</p>
+<li>header</li>
+  <li>nav</li>
+  <li>main</li>
+  <li>footer</li>

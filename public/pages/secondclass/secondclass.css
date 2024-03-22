@@ -1,0 +1,8 @@
+.scope-container ul {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.scope-container li {
+  padding-top: 20px;
+}

@@ -1,0 +1,58 @@
+<h1>Redirection</h1>
+<li>Server-side redirection</li>
+<li>Client-side redirection</li>
+<p>
+  Server-Side redirection er når en bruger blivere omdiregeret på server niveau inden at client får noget at
+  vide.
+</p>
+<pre><code>
+        app.get("/secretpassphrase", (req, res) => {
+            if (req.query.passphrase !== "SesameOpenUp") {
+              res.status(400).send({ data: "Wrong PassPhrase" });
+            } else {
+              res.redirect("/treasuretrove");
+            }
+          });
+    </code></pre>
+<p>
+  i dette snippet er der et endpoint som kigger på om den har modtaget en korrekt query fra Url'en. hvis ikke
+  så får man en en wrong passphrase, har man skrevet det korrekte passphrase så omdiregere serveren brugeren
+  om til endpointet /treasuretrove Client-side redirection er når når der er noget på en clients end der
+  trigger en omdiregering.
+</p>
+<pre><code>
+        setTimeout(() => {window.location.href = "/publicSquare"}, 3000) 
+    </code></pre>
+<p>
+  i snippet er der simuleret et redirect efter 3 sekunder på en html side. den omdiregere client side til et
+  endpoint der hedder "/PublicSquare" client side redirection kan tage noget work-load af serveren.
+  server-side redirection virker universelt over platforme og browser og har muligvis en betydning i forhold
+  til SEO.
+</p>
+
+<h1>SSR vs CSR</h1>
+<li>Server-side Rendering</li>
+<li>client-side Rendering</li>
+<p>
+  i disse disipliner: Load time:<br />
+  Server-side giver hurtigere "load" id end CS gør. dette er fordi SS kan sende templated html filer afsted.
+  Ressources spent (duration, when and where):<br />
+  resource forbrug er relevant og kan reduceres på client side ved at bruge SSR istedet for CSR. det reducere
+  resources forbrug på client device. hvis det nu er en ældre enhed der benyttes til at browse med SEO.<br />
+  SSR er også relevant når det kommer til SEO, det er med til at optimere SEO ranking, da man bliver mere
+  search bots kan læse siden nemmere. der er vist andre muligheder for optimering af SEO for CSR men dem
+  kender jeg ikke til dybdte gående. men man kan vist manipulere meta data for dette. Dealing with CORS. (SSR
+  has no CORS issues.)<br />
+  SSR dealer ikke med CORS issue, fordi at når man pre-bygger sin html så ligger alle filerne i det samme
+  Directory og der er derfor ikke nogen mulighed for at CORS problemer kan opstå
+  <br />
+  <a><img src="/assets/images/SSR/Templateengine.PNG" alt="kode snippet af templateEngine" /></a><br />
+
+  her er et eksempel på SSR i min kode. jeg har en JS fil i min util folder der hedder templateEngine. den
+  exportere to metoder, readPage og renderPage, som bruges inde i min readPage Js fil. men det sjove sker i
+  renderPage metoden. man kan se at den tager imod en side og en config og så returnere den en header
+  component som den læser fra en fil i const header = .... , den udskifter så nogle tags der er i headeren med
+  noget custom, dette er så det er muligt at sætte individuelle titles og CCS links på de forskellige sider
+  derefter tager den, den page som den har fået med som parameter og bagefter smider den footeren på. så har
+  man en renderet HTML side som sendes afsted til client.
+</p>
