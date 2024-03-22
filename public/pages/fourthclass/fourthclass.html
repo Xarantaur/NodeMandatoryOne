@@ -1,13 +1,13 @@
 <h1>CRUD Rest API der følger conventioner</h1>
 <p>denne dag færdigegjorde vi "drinks" Rest api og fulgte REST conventions til at lave disse:</p>
-<a><img src="/assets/images/crud/getcrud.PNG" class="images" /></a>
+<a><img src="/assets/images/crud/getcrud.PNG" class="images" alt="HTTP get"/></a>
 <pre><code>
     app.get("/drinks", (req, res) => {
     res.send({ data: drinks });
   });
  </code></pre>
 <p>app.get("/drinks"), beskriver hvad routen gør</p>
-<a><img src="/assets/images/crud/getidcrud.PNG" class="images" /></a>
+<a><img src="/assets/images/crud/getidcrud.PNG" class="images" alt="HTTP get"/></a>
 <pre><code>
     app.get("/drinks/:id", (req, res) => {
         const drinkId = Number(req.params.id);
@@ -20,7 +20,7 @@
       });
 </code></pre>
 <p>app.get/drinks/:id beskriver hvad det er den her route gør.</p>
-<a><img src="/assets/images/crud/postcrud.PNG" class="images" /></a>
+<a><img src="/assets/images/crud/postcrud.PNG" class="images" alt="HTTP Post"/></a>
 <pre><code>
     app.post("/drinks", (req, res) => {
     const newDrink = req.body;
@@ -31,7 +31,7 @@
     });
 </code></pre>
 <p>app.post("/drinks"),beskriver hvad routen gør</p>
-<a><img src="/assets/images/crud/putcrud.PNG" class="images" /></a>
+<a><img src="/assets/images/crud/putcrud.PNG" class="images" alt="HTTP put" /></a>
 <pre><code>
     app.put("/drinks/:id", (req, res) => {
         const drinkId = Number(req.params.id);                             
@@ -46,7 +46,7 @@
       });
 </code></pre>
 <p>app.put("/drinks/:id") ,beskriver hvad routen gør</p>
-<a><img src="/assets/images/crud/deletecrud.PNG" class="images" /></a>
+<a><img src="/assets/images/crud/deletecrud.PNG" class="images" alt="HTTP delete"/></a>
 <pre><code>
     app.delete('/drinks/:id', (req, res) => {  
         // findIndex, find, splice
@@ -72,7 +72,7 @@
 <p>så får man datoen og tid i UTC, det er standarden, alternativt:</p>
 <pre><code>Date()</code></pre>
 <p>kan man bruge Date() som bruger den lokale tid på ens system.</p>
-<a><img src="/assets/images/date/date.PNG" class="images" /></a>
+<a><img src="/assets/images/date/date.PNG" class="images" alt="date"/></a>
 <p>jeg har eksempvis brugt Date().getFullYear til at få copyright året på footeren.</p>
 
 <h1>kan skrive et fetch kald på kommando:</h1>

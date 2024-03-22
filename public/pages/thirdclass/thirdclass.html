@@ -4,7 +4,7 @@
   det genstarter et node.js project automatisk når det opfanger ændringer i 
   projekt mappestrukturen.
   </p>
-  <a><img src="/assets/images/nodemon/nodemon terminal.png"></a><br>
+  <a><img src="/assets/images/nodemon/nodemon terminal.png" alt="nodemon i terminal"></a><br>
   
   <p>
   nodemon terminal kommandoer jeg bruger ofte: 
@@ -16,50 +16,50 @@
   <p> genstarter nodemon ( forudsat at nodemon køre )</p>
   <li>ctrl+C</li>
   <p>stopper nodemon</p>
-  <a > <img src="/assets/images/nodemon/nodemonstart.png"></a>
+  <a > <img src="/assets/images/nodemon/nodemonstart.png" alt="nodemon start"></a>
   <p> her ses hvad det er for nogle filer nodemon lytter på som default "js,mjs,cjs,json"</p>
 </div>
 <h1>loops</h1>
 <div class="loop-container">
 <li>forEach</li>
-<p><a><img src="/assets/images/loops/forEach.PNG"></a> 
+<p><a><img src="/assets/images/loops/forEach.PNG" alt="forEach loop"></a> 
 foreach loop er en metode der går igennem et array og udføre en handling på hvert element.
 eksempelvis udskriver hvert element.</p>
 <li>Map</li>
-<p><img src="/assets/images/loops/familymap.png">
+<p><img src="/assets/images/loops/familymap.png" alt="map">
 iterere også igennem et array og udføre en handling på elementerne 
 men returnere et nyt array med nye elementer og lader det gamle stå, her putter jeg efternavn hansen på alle elementerne i arrayet</p>
 <li>Filter</li>
-<p><img src="/assets/images/loops/filterloop.png">
+<p><img src="/assets/images/loops/filterloop.png" alt=" filter function">
 filtere igennem et array, leder efter elementer der opfylder en condition og putter dem ind i et nyt array
 den returnere et nyt array med elementer der har opfyldt betingelsen/condition, eksemplet viser en betingelse der hedder hvis elementet starter med "l"
 så filteres det </p>
 <li>Sort</li>
-<p><img src="/assets/images/loops/sortfamily.png">
+<p><img src="/assets/images/loops/sortfamily.png" alt="sort function">
  den sortere et array ud fra en comperator, i dette tilfælde bruger jeg localecompare, til at sortere arrayet i alfabetisk rækkefølge.</p>
 <li>Find</li>
-<p> <img src="/assets/images/loops/findfamily.png">
+<p> <img src="/assets/images/loops/findfamily.png" alt="find function">
 find iterere igennem arrayet og finder et element der opfylder en betingelse lidt ligesom filter. men find stopper ved det først
 fundne element.</p>
 <li>Reduce</li>
-<p><img src="/assets/images/loops/reduce.png"> 
+<p><img src="/assets/images/loops/reduce.png" alt="reduce function"> 
 reduce går igennem hvert element i arrayet og ligger 1 til "countfamily" hver gang den finder et element, i det her tilfælde tæller jeg elementer i arrayet. </p>
 </div>
 <h1>side effects</h1>
 <div class="sideeffects-container">
 <p>undgå side effects i JS, brug altid loop metoder. det gør koden lettere at læse fordi metoder kommunikere, intent
 altid lad det originale være i fred. ikke ændre på noget man modtager, lav noget nyt. 
-<a><img src="/assets/images/sideffects/nosideeffects.png"></a> 
+<a><img src="/assets/images/sideffects/nosideeffects.png" alt=" no side effects display"></a> 
 eksempelt her viser hvordan .map er brugt til at gange alle elementerne i arrayet med 2 og så lave et nyt array med de transformerede værdier
 så der nu eksistere to arrays, et originalt og et dobbelt
 side effekts opstår når en funktion påvirker variabler uden for dennes scope.
-<a> <img src="/assets/images/sideffects/sideeffect.png"></a>
+<a> <img src="/assets/images/sideffects/sideeffect.png" alt="side effect display"></a>
 her kan man se hvordan metoden der fordobler tallene i arrayet, ødelægger det originale array.</p>
 
 </div>
 <h1>atanomy af en Url</h1>
 <div class="urlanatomy-container">
-<p><a><img src="/assets/images/anatomy/url.PNG"></a>
+<p><a><img src="/assets/images/anatomy/url.PNG" alt="en url"></a>
 opbygning af en url. 
 <li>Protocol:</li>
 <p>HTTPS</p>
@@ -78,13 +78,13 @@ opbygning af en url.
 </p>
 </div>
 <h1>post request and handle it in express</h1>
-<p><a><img src="/assets/images/endpointdesign/postdrinks.png"></a>
+<p><a><img src="/assets/images/endpointdesign/postdrinks.png" alt="drinks Rest design"></a>
 her er et eksempel på en post route i express. den bruger req.body til at modtage et object og skubbe dette ind i array
 der simulere en database af drinks.
-<a><img src="/assets/images/endpointdesign/postmanddrink.PNG"></a>
+<a><img src="/assets/images/endpointdesign/postmanddrink.PNG" alt="postmand post drinks"></a>
 her benytter jeg endpointet med postmand, smider et object med i body, uden id, 
  og får objektet tilbage med et auto incremenetet id 
-<a><img src="/assets/images/endpointdesign/bodyparser.png"></a>
+<a><img src="/assets/images/endpointdesign/bodyparser.png" alt="bodyparser"></a>
 for at kunne bruge dette blev vi introduceret til body parser. og at vi ikke skulle bruge den
 fordi den allerede er indbygget i Express, vi kan derfor bruge app.use(express.json());
 til at diktere at ting der kommer fra body skal parses som json.
